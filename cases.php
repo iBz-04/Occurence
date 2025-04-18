@@ -148,7 +148,7 @@
                   else{
                     ?>
                     <tr>
-                    <td colspan="9"><span class="fail" style="textalign:center; color: red; font-size=25px; margin: 2rem 1rem;">No data in the database!</span></td>
+                    <td colspan="9"><span class="fail" style="textalign:center; color: red; font-size:25px; margin: 2rem 1rem;">No data in the database!</span></td>
                     </tr>
                     <?php
 

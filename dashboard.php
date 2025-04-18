@@ -98,7 +98,7 @@
                       <a href="addCase.php">
                         <i class="uil uil-plus icon"></i>
                       </a>
-                     </div>
+                    </div>
                     </div>
 
                     <div class="cardBody">
@@ -116,7 +116,7 @@
                     <div class="cartTitle flex">
                       <i class="uil uil-chat-info icon"></i>
                       <span>Open Cases</span>
-                   
+
                     </div>
 
                     <div class="cardBody">

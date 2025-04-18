@@ -13,6 +13,8 @@ include('partials/loginCheck.php');
 </head>
     <!-- Css Link -->
      <link rel="stylesheet" href="./main.css">
+     <!-- Custom overrides -->
+     <link rel="stylesheet" href="./custom.css">
      <!-- Icons Library link -->
      <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
     
