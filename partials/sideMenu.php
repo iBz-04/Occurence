@@ -19,6 +19,13 @@
               <span class="listName">Dashboard</span>
             </li>
            </a>
+           
+           <a href="analytics.php">
+            <li class="list">
+              <i class="uil uil-chart-line icon"></i>
+              <span class="listName">Analytics</span>
+            </li>
+           </a>
     
     
          <a href="addCase.php">
@@ -34,6 +41,13 @@
             <span class="listName">Followed Up</span>
           </li>
          </a> 
+
+         <a href="advanced-search.php">
+          <li class="list">
+            <i class="uil uil-search-alt icon"></i>
+            <span class="listName">Advanced Search</span>
+          </li>
+         </a>
 
          <a href="incidentTypes.php">
             <li class="list">

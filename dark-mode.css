@@ -1,0 +1,131 @@
+/* Dark Mode Styles */
+.dark-mode {
+    --body-bg: #1a1a2e;
+    --sidebar-bg: #16213e;
+    --card-bg: #0f3460;
+    --text-color: #f5f5f5;
+    --header-color: #ffffff;
+    --border-color: #2a2a4a;
+    --hover-color: #283e6b;
+    --shadow-color: rgba(0, 0, 0, 0.5);
+    --muted-text: #a0a0a0;
+    --accent-color: #4e73df;
+    --table-header-bg: #1a2035;
+    --table-row-hover: #1f2940;
+    --input-bg: #111827;
+    --input-text: #e0e0e0;
+}
+
+body.dark-mode {
+    background-color: var(--body-bg);
+    color: var(--text-color);
+    transition: all 0.3s ease;
+}
+
+/* Sidebar Dark Mode */
+.dark-mode .sideMenu {
+    background-color: var(--sidebar-bg);
+    border-right: 1px solid var(--border-color);
+}
+
+.dark-mode .list:hover {
+    background-color: var(--hover-color);
+}
+
+/* Main Content Dark Mode */
+.dark-mode .mainContent {
+    background-color: var(--body-bg);
+}
+
+.dark-mode .topSection {
+    background-color: var(--sidebar-bg);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.dark-mode .dashboardTitle h1 {
+    color: var(--header-color);
+}
+
+.dark-mode .userName span,
+.dark-mode .userName small {
+    color: var(--text-color);
+}
+
+/* Cards Dark Mode */
+.dark-mode .card {
+    background-color: var(--card-bg);
+    box-shadow: 0 3px 10px var(--shadow-color);
+}
+
+.dark-mode .card small,
+.dark-mode .percentage {
+    color: var(--muted-text);
+}
+
+.dark-mode .cartTitle {
+    color: var(--header-color);
+}
+
+.dark-mode .chartBox {
+    background-color: var(--card-bg);
+}
+
+.dark-mode .chartBox h3 {
+    color: var(--header-color);
+}
+
+/* Tables Dark Mode */
+.dark-mode table {
+    color: var(--text-color);
+}
+
+.dark-mode th {
+    background-color: var(--table-header-bg);
+    color: var(--header-color);
+}
+
+.dark-mode td {
+    border-bottom: 1px solid var(--border-color);
+}
+
+.dark-mode tr:hover {
+    background-color: var(--table-row-hover);
+}
+
+/* Buttons and Inputs Dark Mode */
+.dark-mode .addBtn a {
+    background-color: var(--accent-color);
+}
+
+.dark-mode input, 
+.dark-mode select, 
+.dark-mode textarea {
+    background-color: var(--input-bg);
+    color: var(--input-text);
+    border: 1px solid var(--border-color);
+}
+
+.dark-mode .row label {
+    color: var(--text-color);
+}
+
+/* Dark Mode Toggle Button */
+.darkModeToggle {
+    cursor: pointer;
+    margin-right: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.darkModeToggle:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+.dark-mode .darkModeToggle:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+} 

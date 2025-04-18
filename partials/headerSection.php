@@ -15,9 +15,13 @@ include('partials/loginCheck.php');
      <link rel="stylesheet" href="./main.css">
      <!-- Custom overrides -->
      <link rel="stylesheet" href="./custom.css">
+     <!-- Dark mode CSS -->
+     <link rel="stylesheet" href="./dark-mode.css">
      <!-- Icons Library link -->
      <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
     
 
   
 <body class="flex">
+<!-- Dark mode script -->
+<script src="./dark-mode.js"></script>
