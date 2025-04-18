@@ -6,7 +6,7 @@
           <img src="./assets/images/atlantis-palm.png" alt="Logo Image">
         </div>
         <h1 class="logoText">
-          DATABASE
+          MENU
         </h1>
       </div>
     

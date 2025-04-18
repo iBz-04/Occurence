@@ -178,7 +178,7 @@
               <div class="swiper-wrapper">
                   <div class="swiper-slide">
                     <div class="swiperImage">
-                      <img src="./assets/ATP Images/atp-(4).jpg" alt="">
+                      <img src="./assets/ATP Images/atp-(6).png" alt="police">
                     </div>
                   </div>
                   <!-- <div class="swiper-slide">
