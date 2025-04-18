@@ -26,7 +26,43 @@
                         }
                     ?></small>
                 </div>
-                <i class="uil uil-bell icon"></i>
+                <div class="notification-container">
+                    <div class="notification-icon" id="notificationIcon">
+                        <i class="uil uil-bell icon"></i>
+                    </div>
+                    <div class="notification-popup" id="notificationPopup">
+                        <div class="notification-header">
+                            <h4>Notifications</h4>
+                            <span class="mark-all-read">Mark all as read</span>
+                        </div>
+                        <div class="notification-list">
+                            <div class="notification-item unread">
+                                <div class="notification-content">
+                                    <div class="notification-title">New case added</div>
+                                    <div class="notification-text">A new theft case has been added by Admin</div>
+                                    <div class="notification-time">2 hours ago</div>
+                                </div>
+                            </div>
+                            <div class="notification-item unread">
+                                <div class="notification-content">
+                                    <div class="notification-title">Case status updated</div>
+                                    <div class="notification-text">Case #1052 has been closed</div>
+                                    <div class="notification-time">5 hours ago</div>
+                                </div>
+                            </div>
+                            <div class="notification-item unread">
+                                <div class="notification-content">
+                                    <div class="notification-title">New admin added</div>
+                                    <div class="notification-text">John Doe has been added as an admin</div>
+                                    <div class="notification-time">Yesterday</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="notification-footer">
+                            <a href="#">View all notifications</a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -245,6 +281,40 @@
                 }
             }
         });
+
+        // Notification functionality
+        const notificationIcon = document.getElementById('notificationIcon');
+        const notificationPopup = document.getElementById('notificationPopup');
+        
+        // Toggle notification popup when bell icon is clicked
+        notificationIcon.addEventListener('click', function(e) {
+            e.stopPropagation();
+            notificationPopup.classList.toggle('show');
+        });
+        
+        // Close notification popup when clicking outside of it
+        document.addEventListener('click', function() {
+            if (notificationPopup.classList.contains('show')) {
+                notificationPopup.classList.remove('show');
+            }
+        });
+        
+        // Prevent popup from closing when clicking inside it
+        notificationPopup.addEventListener('click', function(e) {
+            e.stopPropagation();
+        });
+        
+        // Mark all as read functionality
+        const markAllReadBtn = document.querySelector('.mark-all-read');
+        markAllReadBtn.addEventListener('click', function() {
+            const unreadItems = document.querySelectorAll('.notification-item.unread');
+            unreadItems.forEach(item => {
+                item.classList.remove('unread');
+            });
+            // Handle the updated badge structure
+            const badge = document.querySelector('.notification-badge');
+            badge.style.display = 'none';
+        });
     });
 </script>
 
@@ -350,6 +420,151 @@
         .wide {
             grid-column: span 1;
         }
+    }
+    
+    .notification-container {
+        position: relative;
+    }
+    
+    .notification-icon {
+        position: relative;
+        cursor: pointer;
+    }
+    
+    .notification-badge {
+        position: absolute;
+        top: -4px;
+        right: -4px;
+        background-color: #e74a3b;
+        border-radius: 50%;
+        width: 10px;
+        height: 10px;
+    }
+    
+    .notification-popup {
+        position: absolute;
+        top: 45px;
+        right: -10px;
+        width: 320px;
+        background-color: white;
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        z-index: 1000;
+        display: none;
+        overflow: hidden;
+    }
+    
+    .notification-popup.show {
+        display: block;
+    }
+    
+    .notification-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px;
+        border-bottom: 1px solid #eee;
+    }
+    
+    .notification-header h4 {
+        margin: 0;
+        color: #333;
+    }
+    
+    .mark-all-read {
+        color: #4e73df;
+        font-size: 12px;
+        cursor: pointer;
+    }
+    
+    .mark-all-read:hover {
+        text-decoration: underline;
+    }
+    
+    .notification-list {
+        max-height: 300px;
+        overflow-y: auto;
+    }
+    
+    .notification-item {
+        padding: 15px;
+        border-bottom: 1px solid #eee;
+        cursor: pointer;
+        transition: background-color 0.2s;
+    }
+    
+    .notification-item:hover {
+        background-color: #f8f9fc;
+    }
+    
+    .notification-item.unread {
+        background-color: #f0f7ff;
+        border-left: 3px solid #4e73df;
+    }
+    
+    .notification-title {
+        font-weight: 600;
+        margin-bottom: 5px;
+        color: #333;
+    }
+    
+    .notification-text {
+        color: #666;
+        font-size: 14px;
+        margin-bottom: 5px;
+    }
+    
+    .notification-time {
+        color: #999;
+        font-size: 12px;
+    }
+    
+    .notification-footer {
+        padding: 10px 15px;
+        text-align: center;
+        border-top: 1px solid #eee;
+    }
+    
+    .notification-footer a {
+        color: #4e73df;
+        text-decoration: none;
+    }
+    
+    .notification-footer a:hover {
+        text-decoration: underline;
+    }
+    
+    /* Dark mode support for notifications */
+    .dark-mode .notification-popup {
+        background-color: var(--card-bg);
+        box-shadow: 0 5px 15px var(--shadow-color);
+    }
+    
+    .dark-mode .notification-header,
+    .dark-mode .notification-footer,
+    .dark-mode .notification-item {
+        border-color: var(--border-color);
+    }
+    
+    .dark-mode .notification-header h4,
+    .dark-mode .notification-title {
+        color: var(--header-color);
+    }
+    
+    .dark-mode .notification-text {
+        color: var(--text-color);
+    }
+    
+    .dark-mode .notification-time {
+        color: var(--muted-text);
+    }
+    
+    .dark-mode .notification-item:hover {
+        background-color: var(--hover-color);
+    }
+    
+    .dark-mode .notification-item.unread {
+        background-color: rgba(78, 115, 223, 0.1);
     }
 </style>
 
