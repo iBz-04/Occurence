@@ -62,6 +62,13 @@
             <span class="listName">Administrators</span>
           </li>
          </a>
+         
+         <a href="settings.php">
+          <li class="list">
+            <i class="uil uil-setting icon"></i>
+            <span class="listName">Settings</span>
+          </li>
+         </a>
     
         
     
