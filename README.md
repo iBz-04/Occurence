@@ -1,7 +1,27 @@
-## Images
-<img src="https://res.cloudinary.com/diekemzs9/image/upload/v1723200797/Screenshot_9-8-2024_13531_localhost_cf6wgb.jpg" alt="My Image" width="950"/>
+<div align="center" style="margin-top: 20px">
+    <img
+      src="https://res.cloudinary.com/diekemzs9/image/upload/v1744980980/Launch_LinkedIn_Single_Image_Ad_2_qab2cp.png"
+      alt="Occurence"
+      height="100"
+    />
+  
 
-<img src="https://res.cloudinary.com/diekemzs9/image/upload/v1723200717/Screenshot_9-8-2024_134734_localhost_lmavog.jpg" alt="My Image" width="950"/>
+  <h3 align="center">Occurence ✮
+  </h3>
+  <b>
+    Police station crime documentation system
+  </b>
+</div>
+
+## Video Demo
+https://github.com/user-attachments/assets/35f16e20-9587-4f39-8187-32a247ee9f46
+
+## Screenshot 
+<img src="https://res.cloudinary.com/diekemzs9/image/upload/v1744980693/Launch_LinkedIn_Single_Image_Ad_1_zaklou.png" alt="My Image" width="900"/>
+
+
+
+
 # Project Overview
 
 This web application is designed to facilitate the daily operations of a police station, offering user-friendly interfaces and essential functionalities. This project leverages a combination of frontend and backend technologies to deliver a seamless user experience while ensuring robust data management and security protocols.

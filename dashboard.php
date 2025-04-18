@@ -16,7 +16,7 @@
           <div class="userBox flex">
             <a href="index.php">
               <div class="adminImage">
-                <img src="./assets/images/pp.jpg" alt="Admin Image">
+                <img src="./assets/images/profile.jpg" alt="Admin Image">
               </div>
             </a>
           <div class="userName">
